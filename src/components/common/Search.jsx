@@ -9,7 +9,7 @@ export const Search = () => {
   const [searchTerm, setSearchTerm] = useState(
     searchParams.get('query') ? searchParams.get('query') : ''
   );
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]); 
 
   useEffect(() => {
     setSearchTerm(searchParams.get('query'));
@@ -20,8 +20,9 @@ export const Search = () => {
     if (searchTerm && searchTerm.length > 2) {
       fetchSearch(searchTerm).then(res => {
           if (res.results.length > 0) {
-            setMovies(res.results);
+            setMovies(res.results); 
           } else {
+            setMovies([]); 
             Notiflix.Notify.failure(`No movies found for '${searchTerm}'`);
           }
         })
