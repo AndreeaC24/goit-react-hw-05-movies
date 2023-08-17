@@ -33,9 +33,8 @@ const MovieItem = () => {
   }, [movieId]);
   return (
     <div className="container">
-      <Link to={location.state?.from || '/movies'} className="btn btn-light mb-3 mt-1">
-        {'\u2190'} Go Back
-      </Link>
+      <Link to={location?.state?.from ?? '/'}
+      className="btn btn-light mb-3 mt-1">{'\u2190'} Go Back</Link>
       {isLoading && <Loader />}
       {hasError && <Error />}
       {notFound && <h1>Requested movie does not exist</h1>}
