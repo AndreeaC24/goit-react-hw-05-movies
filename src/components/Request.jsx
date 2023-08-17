@@ -21,5 +21,4 @@ export const fetchReview = (id) => {
 export const fetchSearch = (query) => {
   return fetch(`${url}search/movie?page=1&api_key=${key}&query=${query}`).then(res => res.json())
 }
-
-//https://api.themoviedb.org/3/search/movie?page=1&api_key=44cd7d40e9c9ffc80f6b2e51bac6d9ee&query=barbie
+ 
