@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { fetchSearch } from '../Request';
+import { fetchSearch } from './Request';
 import { MovieList } from './MovieList';
 import Notiflix from 'notiflix';
 

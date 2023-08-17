@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Loader } from '../common/Loader';
-import { Error } from '../common/Error';
-import { fetchReview } from '../Request';  
+import { Loader } from './common/Loader';
+import { Error } from './common/Error';
+import { fetchReview } from './Request';  
 
 const Reviews = () => {
     const {movieId } = useParams();

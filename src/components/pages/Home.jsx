@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchTrending } from '../Request';
-import { MovieList } from './MovieList';
+import { MovieList } from '../MovieList';
 import { Loader } from '../common/Loader';
 import { Error } from '../common/Error';
 

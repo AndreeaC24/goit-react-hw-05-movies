@@ -1,8 +1,8 @@
 import { useParams, NavLink, Outlet, useLocation, Link} from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
-import { Loader } from '../../common/Loader';
-import { Error } from '../../common/Error';
-import { fetchMovie } from '../../Request';
+import { Loader } from '../common/Loader';
+import { Error } from '../common/Error';
+import { fetchMovie } from '../Request';
 import css from './MovieItem.module.css';
 
 const MovieItem = () => {
@@ -75,6 +75,7 @@ const MovieItem = () => {
                     <NavLink
                       className="nav-link px-3 mx-2 text-dark border btn btn-hover btn-info"
                       to="cast"
+                      state={{ from: location?.state?.from ?? '/' }} 
                     > Cast 
                     </NavLink>
                   </li>
@@ -82,6 +83,7 @@ const MovieItem = () => {
                     <NavLink
                       className="nav-link px-3 text-dark border btn btn-hover btn-info"
                       to="reviews"
+                      state={{ from: location?.state?.from ?? '/' }} 
                     > Reviews 
                     </NavLink>
                   </li>
