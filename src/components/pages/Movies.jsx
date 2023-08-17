@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Search } from '../common/Search';
+import { Search } from './Search';
 import Notiflix from 'notiflix';
 
 const Movies = () => {
